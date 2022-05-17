@@ -100,25 +100,24 @@ analytics:
 author:
   name             : "0x107a"
   avatar           : "https://avatars.githubusercontent.com/u/105689678?v=4"
-  bio              : ""
-  location         : ""
+  bio              : "I like computers."
+  location         : "United States"
   links:
     - label: "PGP Key"
       icon: "fas fa-fw fa-key"
-      url: ""
+      url: "https://0x107a.github.io/about#pgp"
     - label: "Keybase"
       icon: "fa fa-home"
-      url: ""
+      url: "https://keybase.io/0x107a"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/0x107a"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter"
-      url: ""
+      url: "https://twitter.com/0x107a"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:0x107a@gmail.com"
-
 # Reading Files
 include:
   - .htaccess
