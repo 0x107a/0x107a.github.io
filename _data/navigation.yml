@@ -1,0 +1,14 @@
+main:
+  - title: "Posts"
+    url: /posts
+  - title: "Categories"
+    url: /categories
+  - title: "Tags"
+    url: /tags
+  - title: "Search"
+    url: /search
+  - title: "About"
+    url: /about
+
+  - url: /keybase.txt
+
