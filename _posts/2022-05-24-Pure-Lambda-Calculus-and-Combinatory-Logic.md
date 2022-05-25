@@ -95,8 +95,7 @@ f = λx.(λy.(x - y))
 
 As we can see, the variable x is free because it has been bound within a parent
 abstraction. This allows the inner function to access the variable x & properly
-perform it's operation. This concept will be important when we get onto the
-concept of currying.
+perform it's operation.
 
 ## α Conversion and Equivalence
 
