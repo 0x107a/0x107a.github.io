@@ -1,5 +1,6 @@
 ---
 title: "Pure Lambda Calculus and Combinatory Logic"
+date: 2022-05-24
 categories:
   - theory
 tags:
