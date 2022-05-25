@@ -16,7 +16,7 @@ the pure (untyped) Lambda Calculus, whilst also attempting to convey the concept
 combinators. There will be future posts detailing the various type systems in which
 this logic system also applies to.
 
-## Description and History of the Lambda Calculus
+## Description and History
 
 Lambda Calculus is a system of logic can be utilized to express computation, equivalent 
 to that of a turing machine. The Church-Turing thesis states that, "A function on the 
@@ -38,7 +38,7 @@ identifier assigned to them. Instead, they are either assigned to a variable, or
 passed to another function as a parameter; which paves the way to higher order
 functions within our system of logic.
 
-## Basic Syntax and Expressions
+## Basic Syntax of Lambda Calculus
 
 Now that we understand what a lambda function is, lets begin with the syntax of the
 Lambda Calculus.
@@ -70,6 +70,14 @@ Answer:
 f = λx.(x * x)
 ```
 
+The bounded variable does not have to be x, nor does it have to be a single character
+at all. Simply by convention and readability, I have chosen to exclusively use a
+set of single character lowercase letters listed within the description section of this
+post.
+
+I will delve deeper into the syntax and evaluation of these expressions further into
+the post, as there is some prerequisite information we must cover before we progress.
+
 ## Free and Bound Variables
 
 The concept of free and bound variables has to do with the scope in which each variable
@@ -94,6 +102,47 @@ concept of currying.
 
 
 ## Currying
+
+Currying is the technique of converting a function that takes multiple arguments into a
+valid sequence of functions that each take a single argument. This is important, as
+an abstraction within Lambda Calculus must contain at most one argument/bound variable.
+
+Lets take this incorrect abstraction and convert it into a valid sequence of terms.
+
+Invalid:
+```
+f = (λxy.(x + y))
+```
+
+Valid:
+```
+f = (λx.(λy.(x + y)))
+```
+
+We have curried the second parameter by simply passing it to our higher function as a
+parameter. The inner term will then add the bound y with the free x, which will return
+in the correct result.
+
+Here are some more examples of currying invalid abstractions.
+
+```
+Invalid: 
+Valid: 
+
+Invalid: 
+Valid: 
+
+Invalid: 
+Valid: 
+
+Invalid: 
+Valid: 
+
+Invalid: 
+Valid: 
+```
+
+## β Equivalence
 ## β Reduction
 ### Normal Order Evaluation
 ### Applicative Order Evaluation
@@ -109,26 +158,35 @@ provides an abstract system in which we are provided predefined combinators, whi
 can utilize when constructing a new system. It achieves this by removing the need for
 bound variables within the expression, and replacing them with combinators.
 
-### History of Combinatory Logic
+Some standard combinators are I, K, S, B, and C, in which I will explain in more detail
+later.
+
+## History of Combinatory Logic
 
 The concept of combinators was introduced by Moses Schönfinkel and Haskell Curry originally
 within 1920. This idea later evolved through the years to eventually form into a whole
 other branch of mathematics, albeit closely related to the Lambda Calculus & other systems
 of logic.
 
-
-### Introduction to Combinatory Logic
+## Introduction to Combinatory Logic
 combinatory terms
 reduction in combinatory logic
 SKI
 
-### Additional Combinatory Systems
-### The Undecidability Theorem
-### Fixed Point Combinators and Recursion
-### Bohm's Theorem
-### Quasi Leftmost Reduction Theorem
+## Reducability and Provability
 
-### Practical Combinatory Logic
+## Additional Combinatory Systems
+## Fixed Point Combinators and Recursion
+## Bohm's Theorem
+## Quasi Leftmost Reduction Theorem
+## Primitive and Total Recursive Functions
+## Abstract Numerals
+## The Undecidability Theorem
+## Practical Combinatory Logic
+random fun combinators
+xor combinator
+functional programming & it's relation to lambda calc & combinatory logic
+plug our lambda calculus interpreter to people :)
 
 ## Last Notes
 
@@ -136,7 +194,11 @@ This concludes my introduction to Lambda Calculus and Combinatory Logic. If any 
 presented within this post is incorrect or vaguely explained, please inform me via my
 contact information listed on my [https://0x107a.github.io/about](about) page.
 
-### Additional Resources
+The next part of this post will delve much deeper into typed Lambda Calculus, as well as
+the massive plethora of type systems that exist. It will focus primarily on the concept
+of Type Theory. Stay tuned for that :)
+
+## Additional Resources
 
 ```
 https://en.wikipedia.org/wiki/Lambda_calculus
@@ -176,10 +238,26 @@ Assuming M and N are λ-terms, then (M N) is an λ-term called an application.
 ##### Abstraction
 
 If M is any λ-term and x is any variable, then (λx. M) is an λ-term known as an
-abstraction. Another way to phrase this is that it's an unevaluated lambda expression.
+abstraction. Another way to phrase this is that it's an unevaluated abstraction.
 
-#### Constant Lambda Expressions
+##### Constant Abstractions
 
-A constant lambda expression is simply an abstraction which returns a constant value
+A constant abstraction is simply an abstraction which returns a constant value
 or free variable.
 
+Here is a simple example:
+```
+(λx.y)(N) = y
+```
+
+Here I have defined an abstraction with a bound variable of x, but we return a free
+variable of y. Since the value of this abstraction will always return the constant/free
+value of y, it is a constant abstraction.
+
+##### Confluence
+
+The term confluence refers to, if a term can be reduced to two different terms, then
+these two terms can further reduce to another single term. 
+
+The Church-Rosser theorem states that the reduction rules of Lambda Calculus are confluent.
+A result of this theorem, is that a term within Lambda Calculus has at most one normal form.
