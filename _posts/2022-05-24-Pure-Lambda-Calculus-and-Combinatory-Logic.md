@@ -1,6 +1,5 @@
 ---
 title: "Pure Lambda Calculus and Combinatory Logic"
-date: 2022-05-24
 categories:
   - theory
 tags:
@@ -10,12 +9,12 @@ tags:
 
 Lambda Calculus is a formal system which exists within the realm of mathematical logic.
 The Lambda Calculus was created by Alonzo Church, in 1930, as a means of studying the
-underlying primitives of mathematical logic.
+underlying primitives of logic.
 
 Within this post, I will primarily be focusing on teaching the core foundations behind
 the pure (untyped) Lambda Calculus, whilst also attempting to convey the concept of
 combinators. There will be future posts detailing the various type systems in which
-this logic system also applies to.
+this system also applies to.
 
 ## Description and History
 
@@ -30,19 +29,19 @@ In fact, the Lambda Calculus was one of the earliest conceptions of what is now 
 a programming language, and has served as the foundation of functional programming
 for decades.
 
-The primary goal behind the conception of the λ symbol was to provide a systematic
+The primary goal behind the conception of the λ notation was to provide a systematic
 means of providing distinct names to functions. Hence, came about the concept of
 anonymous functions.
 
 Anonymous functions, as the name implies, are functions which do not have a static
 identifier assigned to them. Instead, they are either assigned to a variable, or
 passed to another function as a parameter; which paves the way to higher order
-functions within our system of logic.
+functions, recursion, and the ability to perform computation.
 
 ## Basic Syntax of Lambda Calculus
 
-Now that we understand what a lambda function is, lets begin with the syntax of the
-Lambda Calculus.
+Now that we understand the general concept behind the Lambda Calculus, lets now
+begin with it's syntax.
 
 ```
 expression -> name | function | application
@@ -53,7 +52,7 @@ application -> ( expression expression )
 As we can see, the syntax for pure Lambda Calculus is extremely simplistic, which
 makes it's Turing completeness all the more elegant. 
 
-A simple lambda expression may be written in the following format:
+A simple [abstraction](#abstraction) may be written in the following format:
 
 ```
 f = λx.(x + 1)
@@ -61,7 +60,7 @@ f = λx.(x + 1)
 
 This lambda expression is semantically equivalent to the algebraic function: f(x) x + 1.
 As we can see from the BNF syntax provided above, the shown example matches to the
-function nonterminal. This is the basic syntax for declaring a lambda expression.
+function nonterminal. This is the basic syntax for declaring an abstraction.
 
 For our last example, let's attempt to convert a simple algebraic function into a lambda
 expression. The algebraic function we want to convert is as follows: f(x) x * x.
@@ -182,7 +181,7 @@ SKI
 ## Primitive and Total Recursive Functions
 ## Abstract Numerals
 ## The Undecidability Theorem
-## Practical Combinatory Logic
+## Practicing Combinatory Logic
 random fun combinators
 xor combinator
 functional programming & it's relation to lambda calc & combinatory logic
@@ -238,7 +237,10 @@ Assuming M and N are λ-terms, then (M N) is an λ-term called an application.
 ##### Abstraction
 
 If M is any λ-term and x is any variable, then (λx. M) is an λ-term known as an
-abstraction. Another way to phrase this is that it's an unevaluated abstraction.
+abstraction. Another way to phrase this is that it's an unevaluated anonymous
+function. If we reference the BNF syntax provided near the beginning of the post,
+we can notice the fact that the function nonterminal represents the syntax for
+declaring an abstraction.
 
 ##### Constant Abstractions
 

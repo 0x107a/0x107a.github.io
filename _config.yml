@@ -101,7 +101,7 @@ author:
   name             : "0x107a"
   avatar           : "https://avatars.githubusercontent.com/u/105689678?v=4"
   bio              : "I like computers."
-  location         : "United States"
+  location         : "::1"
   links:
     - label: "PGP Key"
       icon: "fas fa-fw fa-key"
