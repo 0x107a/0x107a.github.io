@@ -105,7 +105,7 @@ author:
   links:
     - label: "PGP Key"
       icon: "fas fa-fw fa-key"
-      url: "https://0x107a.github.io/about#pgp"
+      url: "https://0x107a.github.io/pgp"
     - label: "Keybase"
       icon: "fa fa-home"
       url: "https://keybase.io/0x107a"
