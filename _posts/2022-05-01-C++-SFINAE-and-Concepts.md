@@ -1,5 +1,7 @@
 ---
 title: "C++ SFINAE and Concepts"
+toc_sticky: true
+toc_title: ""
 categories:
   - programming
 tags:
@@ -411,6 +413,7 @@ debug, but imagine errors such as this on the scale of a massive code base. It w
 hysteria.
 
 Feel free to compile the code provided and look at the error message provided by the compiler.
+I wont be showing the error message here as it would bloat up the post.
 
 Now lets write our own [type predicate](##type-predicate) to check if a type has been overloaded
 for the ```ostream::operator<<```.

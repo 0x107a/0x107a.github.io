@@ -1,5 +1,7 @@
 ---
 title: "Glibc 2.23/2.33 Ptmalloc2 Fastbin"
+toc_sticky: true
+toc_title: ""
 categories:
   - ctf
 tags:
