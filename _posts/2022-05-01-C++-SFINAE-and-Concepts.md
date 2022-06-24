@@ -408,8 +408,9 @@ int main(int argc, char**argv) {
 
 Havoc will ensue.
 
-<details>
-<summary>Click me for dropdown of error message (yes its that bad..)</summary>
+<p>
+<details><summary>Click me for dropdown of error message (yes its that bad..)</summary></br>
+
 ```
 example.cpp: In instantiation of ‘void ostream_to_cout(const T&) [with T = human]’:
 example.cpp:13:18:   required from here
@@ -603,8 +604,9 @@ example.cpp:7:13: note:   cannot convert ‘v’ (type ‘const human’) to typ
 example.cpp:7:13: note:   cannot convert ‘v’ (type ‘const human’) to type ‘const unsigned char*’
     7 |   std::cout << v << std::endl;
       |   ~~~~~~~~~~^~~~
-```
-</details>
+```s
+
+</details></p>
 
 Now lets write our own [type predicate](##type-predicate) to check if a type has been overloaded
 for the ```ostream::operator<<```.
@@ -649,7 +651,6 @@ example.cpp:18:3:   required from here
  2614 |     using enable_if_t = typename enable_if<_Cond, _Tp>::type;
       |           ^~~~~~~~~~~
 ```
-</details>
 
 Much more readable and concise isn't it? Now that we have employed SFINAE, the error message will not
 exponentially spiral out of control.
