@@ -245,8 +245,8 @@ defaults:
       layout: single
       classes: wide
       toc: true
-      toc_sticky: true
-      toc_title: ""
+      toc_sticky: false
+      toc_title: " "
       author_profile: true
       read_time: false
       comments: false

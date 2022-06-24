@@ -1,7 +1,5 @@
 ---
 title: "House of Force"
-toc_sticky: true
-toc_title: ""
 categories:
   - ctf
 tags:

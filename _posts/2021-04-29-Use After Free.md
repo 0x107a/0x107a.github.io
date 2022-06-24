@@ -1,7 +1,5 @@
 ---
 title: "Ptmalloc Exploitation - Use After Free"
-toc_sticky: true
-toc_title: ""
 categories:
   - ctf
 tags:
