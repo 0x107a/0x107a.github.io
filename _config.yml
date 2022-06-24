@@ -246,6 +246,7 @@ defaults:
       classes: wide
       toc: true
       toc_sticky: true
+      toc_title: ""
       author_profile: true
       read_time: false
       comments: false
