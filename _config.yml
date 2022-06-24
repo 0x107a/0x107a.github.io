@@ -244,6 +244,7 @@ defaults:
     values:
       layout: single
       classes: wide
+      toc: true
       author_profile: true
       read_time: false
       comments: false

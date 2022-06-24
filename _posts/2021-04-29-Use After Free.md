@@ -11,13 +11,7 @@ This is going to be my explanation on an extremely prevalant security vulnerabil
 Free. These vulnerabilities come from lack of access control, which allows the client or end user to
 create and control dangling pointers to arbitrary chunks on the heap.
 
-I will be completing and explaining a few labs that demonstrate use after free, so is the toc
-to each of them:
-
-====== Table of Contents ======
-* [Part 1](#part-1)
-* [Part 2](#part-2)
-* [Protostar Heap 2](#protostar-heap-2)
+I will be completing and explaining a few labs that demonstrate use after free.
 
 ## Part 1
 

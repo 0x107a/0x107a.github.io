@@ -1,7 +1,5 @@
 ---
 title: "C++ SFINAE and Concepts"
-toc: true
-toc_sticky: true
 categories:
   - programming
 tags:
