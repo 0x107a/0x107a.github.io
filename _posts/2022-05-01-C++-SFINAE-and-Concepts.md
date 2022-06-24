@@ -37,7 +37,7 @@ signatures.
 Here is a brief summary of the steps overload resolution takes. If you would like more information
 on this topic, I have provided additional resources at the bottom of the post.
 
-#### Name Lookup
+### Name Lookup
 
 This is the first step of overload resolution; in which the compiler will simply check for valid
 identifiers that may be overloaded.
@@ -46,12 +46,12 @@ If the entity is a function, then this procedure will additionally include an ar
 lookup. This essentially means that it will only return valid function signatures as a candidate
 for overload resolution.
 
-#### Filter Candidates
+### Filter Candidates
 
 If more than one potential candidate exists, then the compiler will attempt to filter the potential
 signatures into a either a smaller set of signatures or a single one.
 
-#### Substitute
+### Substitition
 
 This is the last step, in which the compiler has either found it's valid signature to substitute,
 or it has run out of potential candidates that are valid. If the signature is valid, then the
