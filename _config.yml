@@ -245,6 +245,7 @@ defaults:
       layout: single
       classes: wide
       toc: true
+      toc_sticky: true
       author_profile: true
       read_time: false
       comments: false
