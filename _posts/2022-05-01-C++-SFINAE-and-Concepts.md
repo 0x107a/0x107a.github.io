@@ -104,7 +104,7 @@ template substitution; rather than having to dig through a massive error message
 provide a demonstration of exactly this technique, as well as the repercussions of letting
 our templates run wild.
 
-#### Basic Usage and Syntax of SFINAE
+### Basic Usage and Syntax of SFINAE
 
 I've explained the notion behind SFINAE, but it's very hard to understand and visualize a
 concept without practical examples; so I will provide one.
@@ -671,28 +671,28 @@ me via either one of my contacts shown on the left. I will try to respond as soo
 
 Thanks for reading and have a great day!
 
-### Additional Resources
-#### Template Metaprogramming Resources
-#### SFINAE Resources
-#### C++20 Concepts Resources
+## Additional Resources
+### Template Metaprogramming Resources
+### SFINAE Resources
+### C++20 Concepts Resources
 
-### Definitions
+## Definitions
 
 Definitions of various opaque terms utilized within this post.
 
-#### Type Predicate
+### Type Predicate
 
 A type predicate is exactly as the term ```predicate``` implies, which is simply an entity that
 evaluates to a boolean. In the case of a type predicate, it will take a type, check for some
 condition, and evaluate to a boolean.
 
-#### Template Subsitution and Instantiation
+### Template Subsitution and Instantiation
 
 The term template substitution refers to the process that the compiler takes to create a new
 definition of a function, class, or class member. The term intantiation refers to the idea,
 and I will be using either interchangeably throughout the course of this post.
 
-#### Type Trait
+### Type Trait
 
 A type trait is a technique within generic programming, which allows us to write
 [type predicates](#type-predicate) which aim to deduce traits about types. These type traits
@@ -701,7 +701,7 @@ with another means of defining these through the ```requires``` expression.
 
 See the [c++20 concepts](#c++20-concepts) section for more on the ```requires``` expression.
 
-#### Entity
+### Entity
 
 An entity within a C++ program is anything that is generalltangible to the runtime of the
 C++ compiler. An example of something that is not an entity is a preprocessor macro, as
@@ -710,13 +710,13 @@ they perform modifications to the code before the compiler begins.
 Here is a more complete list of everything that is considered an entity within c++:
 https://en.cppreference.com/w/cpp/language/basic_concepts
 
-#### Template Specialization
+### Template Specialization
 
 Template specialization is a technique which allows the programmer to define custom the
 contents of the template for a given set of predefined template arguments. Multiple examples
 of how template specialization may be used are shown below.
 
-##### Factorial
+#### Factorial
 
 We can calculate the factorial of an integer at compile time using template specialization
 as the base case for the recursive loop.
@@ -733,7 +733,7 @@ struct factorial<0> {
 };
 ```
 
-##### Greatest Common Divisor
+#### Greatest Common Divisor
 
 The same can be done for the Euclidean GCD algorithm. This algorithm demonstrates how
 partial specialization works.
