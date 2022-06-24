@@ -1,5 +1,6 @@
 ---
 title: "C++ SFINAE and Concepts"
+toc: true
 categories:
   - programming
 tags:
@@ -13,32 +14,6 @@ realm of generic programming in C++.
 These techniques and features provide us with the ability to place constraints on template
 parameters at compile time. With this, better error propigation and much more maintainable
 code comes as a result.
-
-## Table of Contents
-
-* [Overload Resolution](#overload-resolution)
-  * [Name Lookup](#name-lookup)
-  * [Filter Candidates](#filter-candidates)
-  * [Substitute](#substitute)
-* [SFINAE and std::enable_if](#sfinae-and-std::enable_if)
-  * [Writing our own Type Predicates]()
-* [Expression SFINAE]()
-  * [Usage of std::void_t]()
-  * [Detection Idiom]()
-  * [Implementing detect_if]()
-* [Usage of std::remove_if]()
-* [Usage of std::decay]()
-* [Additional Syntax]()
-* [C++20 Concepts]()
-* [Basic Usage and Syntax of C++20 Concepts]()
-* [Requires Clause]()
-* [Requires Expression]()
-* [Concept Constraints]()
-* [Concepts vs SFINAE]()
-* [Practical Examples]()
-  * [Constraints for Overloads]()
-* [Conclusion]()
-* [Additional Resources]()
 
 ## Overload Resolution
 
@@ -88,8 +63,6 @@ This is the last step, in which the compiler has either found it's valid signatu
 or it has run out of potential candidates that are valid. If the signature is valid, then the
 entity will be generated; else an error will be propigated about the failure to deduce and
 substitute the template.
-
-<br>
 
 Now that we understand a bit more on the process the compiler takes to resolve and deduce the
 valid signature to substitute; lets move onto SFINAE.
@@ -684,6 +657,7 @@ example.cpp:18:3:   required from here
  2614 |     using enable_if_t = typename enable_if<_Cond, _Tp>::type;
       |           ^~~~~~~~~~~
 ```
+</details>
 
 Much more readable and concise isn't it? Now that we have employed SFINAE, the error message will not
 exponentially spiral out of control.
@@ -787,8 +761,6 @@ struct gcd<X, 0> {
 Although these examples seem a bit silly at first glance, there are potentially some very
 niche applications for compile-time data generation/modification. Anyways, I think its a
 good way to teach template specialization and template metaprogramming in general.
-
-<br>
 
 See the [Writing our own Type Predicates](#writing-our-own-type-predicates) section of
 this post for more information on the practical usage of this technique.
