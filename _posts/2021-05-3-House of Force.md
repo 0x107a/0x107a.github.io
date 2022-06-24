@@ -1,5 +1,5 @@
 ---
-title: "House of force"
+title: "House of Force"
 categories:
   - ctf
 tags:
