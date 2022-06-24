@@ -37,13 +37,6 @@ signatures.
 Here is a brief summary of the steps overload resolution takes. If you would like more information
 on this topic, I have provided additional resources at the bottom of the post.
 
-* [Name Lookup](#name-lookup)
-  * Find candidate for substitution via name lookup.
-* [Filter Candidates](#filter-candidates)
-  * Filter set of candidates into a set of possible overloads.
-* [Substitute](#substitute) Substitute and generate resulting entity from template.
-  * Deduce most viable signature & generate entity.
-
 #### Name Lookup
 
 This is the first step of overload resolution; in which the compiler will simply check for valid
