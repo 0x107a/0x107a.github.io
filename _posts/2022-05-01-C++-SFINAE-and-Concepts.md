@@ -14,6 +14,44 @@ These techniques and features provide us with the ability to place constraints o
 parameters at compile time. With this, better error propigation and much more maintainable
 code comes as a result.
 
+## Table of Contents
+- [Overload Resolution](#overload-resolution)
+  * [Name Lookup](#name-lookup)
+  * [Filter Candidates](#filter-candidates)
+  * [Substitition](#substitition)
+- [SFINAE and std::enable_if](#sfinae-and-std--enable-if)
+  * [Basic Usage and Syntax of SFINAE](#basic-usage-and-syntax-of-sfinae)
+- [Writing our own Type Predicates](#writing-our-own-type-predicates)
+- [Expression SFINAE](#expression-sfinae)
+  * [Usage of std::void_t](#usage-of-std--void-t)
+  * [Detection Idiom](#detection-idiom)
+  * [Implementing detect_if](#implementing-detect-if)
+- [Usage of std::remove_if](#usage-of-std--remove-if)
+- [Usage of std::decay](#usage-of-std--decay)
+- [Additional Syntax](#additional-syntax)
+- [C++20 Concepts](#c--20-concepts)
+- [Basic Usage and Syntax of C++20 Concepts](#basic-usage-and-syntax-of-c--20-concepts)
+- [Requires Clause](#requires-clause)
+- [Requires Expression](#requires-expression)
+- [Concept Constraints](#concept-constraints)
+- [Concepts vs SFINAE](#concepts-vs-sfinae)
+- [Practical Examples](#practical-examples)
+  * [Constraints For Overloads](#constraints-for-overloads)
+- [Conclusion](#conclusion)
+- [Additional Resources](#additional-resources)
+  * [Template Metaprogramming Resources](#template-metaprogramming-resources)
+  * [SFINAE Resources](#sfinae-resources)
+  * [C++20 Concepts Resources](#c--20-concepts-resources)
+- [Definitions](#definitions)
+  * [Type Predicate](#type-predicate)
+  * [Template Subsitution and Instantiation](#template-subsitution-and-instantiation)
+  * [Type Trait](#type-trait)
+  * [Entity](#entity)
+  * [Template Specialization](#template-specialization)
+    + [Factorial](#factorial)
+    + [Greatest Common Divisor](#greatest-common-divisor)
+
+
 ## Overload Resolution
 
 Before we dive into SFINAE and c++20 concepts, let's first take a look at how c++ implements
